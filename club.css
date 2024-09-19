@@ -8,7 +8,7 @@ h2 {
 }
 
 .hero {
-    background: url(../img/header.jpg) no-repeat;
+    background: url(img/estadio.png) no-repeat;
     background-size: cover;
     height: 50vh;
     min-height: 600px;
