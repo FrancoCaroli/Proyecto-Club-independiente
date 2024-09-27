@@ -1,16 +1,24 @@
-footer {
-    background-color: #aaa;
+.carousel-item img {
+    height: 300px;
+    object-fit: cover; 
+    width: 100%; 
 }
 
-h1,
-h2 {
-    font-family: 'Alfa Slab One', cursive;
+body{
+    background-color: #C8102E;
 }
 
-.hero {
-    background: url(img/estadio.png) no-repeat;
-    background-size: cover;
-    height: 50vh;
-    min-height: 600px;
-    color: white;
+.navbar {
+    border-bottom: 1px solid black; 
 }
+
+
+
+
+
+
+
+
+
+
+
