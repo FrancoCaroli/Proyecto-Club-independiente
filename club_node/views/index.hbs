@@ -1,108 +1,336 @@
-<!-- carrusel y tabla -->
+<!-- Comienza Sección Eventos  -->
+<link rel="stylesheet" href="club.css">
+<div id="eventos" class="container my-5">
+    <h2 class="text-center">Próximos Eventos</h2>
     <div class="row">
-        <div class="col-md-6">
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/Captura de pantalla 2024-09-25 113455.png" alt="Imagen 1" class="d-block">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/estadio.png" alt="Imagen 2" class="d-block">
-                    </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/estadio.png" class="card-img-top" alt="Evento 1">
+                <div class="card-body">
+                    <h5 class="card-title">Evento 1</h5>
+                    <p class="card-text">Vamos a mejorar el estadio de futbol</p>
+
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
-        <div class="col-md-6">
-            <h2 class="text-center">Tabla de la Liga</h2>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Posición</th>
-                        <th>Equipo</th>
-                        <th>Partidos Jugados</th>
-                        <th>Puntos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Equipo A</td>
-                        <td>10</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Equipo B</td>
-                        <td>10</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Equipo C</td>
-                        <td>10</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Equipo D</td>
-                        <td>10</td>
-                        <td>18</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <!-- FIN carrusel y tabla -->
-    
-    <!-- COMIENZO seccion visitanos -->
-    <div id="conocenos" class="row py-4">
-        <div class="col-md-4 offset-md-2">
-            <h2>Visitanos</h2>
-            <div class="mapa">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798.1107369203612!2d-61.60873770803249!3d-34.01445899949085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c7e9710ecc6963%3A0x10df05d02cd5311c!2sIndependiente%20F%C3%BAtbol%20Club!5e0!3m2!1ses!2sar!4v1727445622378!5m2!1ses!2sar"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/evento2.jpg" class="card-img-top" alt="Evento 2">
+                <div class="card-body">
+                    <h5 class="card-title">Evento 2</h5>
+                    <p class="card-text"></p>
+
+                </div>
             </div>
         </div>
-        <!-- COMIENZO contactanos -->
-        <div class="col-md-4 mt-4 mt-sm-0">
-            <h2>Contactanos</h2>
-            <form class="row g-3" action="/" method="post">
-                <div class="col-md-6">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/evento3.jpg" class="card-img-top" alt="Evento 3">
+                <div class="card-body">
+                    <h5 class="card-title">Evento 3</h5>
+                    <p class="card-text"></p>
+
                 </div>
-                <div class="col-md-6">
-                    <label for="apellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="apellido" name="apellido">
-                </div>
-                <div class="col-12">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder="email@email.com">
-                </div>
-                <div class="col-12">
-                    <label for="tel" class="form-label">Tel</label>
-                    <input type="text" class="form-control" id="tel" name="tel" placeholder="...">
-                </div>
-                <div class="col-12">
-                    <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-            </form>
-            {{message}}
+            </div>
         </div>
-        <!-- FIN contactanos -->
     </div>
-    <!-- FIN seccion visitanos -->
+</div>
+<!-- Fin Sección Eventos -->
+<!-- Comienza la fila que contiene tanto la tabla como la sección de socios -->
+<div class="d-flex justify-content-between my-5">
+    <div class="tabla-container">
+        <!-- comienzo tabla -->
+
+        
+        <table id="tabla-liga" class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th colspan="9">
+                        <h2>Tabla de la liga</h2>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>Equipo</th>
+                    <th>J</th>
+                    <th>G</th>
+                    <th>E</th>
+                    <th>P</th>
+                    <th>GF</th>
+                    <th>GC</th>
+                    <th>DIF</th>
+                    <th>PTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">1</span>
+                            <img src="" alt="Logo Equipo A">
+                            <span class="nombre-equipo">Centenario FBC</span>
+                        </div>
+                    </td>
+                    <td>17</td>
+                    <td>9</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>27</td>
+                    <td>14</td>
+                    <td>13</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">2</span>
+                            <img src="ruta-a-logo.jpg" alt="Logo Equipo B">
+                            <span class="nombre-equipo">Equipo B</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">3</span>
+                            <img src="ruta-a-logo.jpg" alt="Logo Equipo C">
+                            <span class="nombre-equipo">Equipo C</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>14</td>
+                    <td>12</td>
+                    <td>2</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">4</span>
+                            <img src="ruta-a-logo.jpg" alt="Logo Equipo D">
+                            <span class="nombre-equipo">Equipo D</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>16</td>
+                    <td>14</td>
+                    <td>2</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">5</span>
+                            <img src="ruta-a-logo.jpg" alt="Logo Equipo E">
+                            <span class="nombre-equipo">Equipo E</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>13</td>
+                    <td>11</td>
+                    <td>2</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">6</span>
+                            <img src="ruta-a-logo.jpg" alt="Logo Equipo F">
+                            <span class="nombre-equipo">Equipo F</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>-1</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">7</span>
+                            <img src="ruta-a-logo.jpg" alt="Logo Equipo G">
+                            <span class="nombre-equipo">Equipo G</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">8</span>
+                            <img src="ruta-a-logo.jpg" alt="Logo Equipo H">
+                            <span class="nombre-equipo">Equipo H</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>12</td>
+                    <td>14</td>
+                    <td>-2</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">9</span>
+                            <img src="ruta-a-logo.jpg" alt="Logo Equipo I">
+                            <span class="nombre-equipo">Equipo I</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>13</td>
+                    <td>-3</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="equipo-info">
+                            <span class="posicion">10</span>
+                            <img src="ruta-a-logo.jpg" alt="Logo Equipo J">
+                            <span class="nombre-equipo">Equipo J</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>9</td>
+                    <td>11</td>
+                    <td>-2</td>
+                    <td>10</td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Sección de Beneficios de ser socio -->
+    <div id="calendario" class="calendario-container" style="flex: 0 0 25%; padding-left: 20px;">
+        <h3 class="text-center">Calendario de Partidos</h3>
+        <ul>
+            <!-- 15 partidos en la lista -->
+            <li><strong>12/12/2024</strong> - <span>Vélez Sarsfield vs Boca Juniors</span> - <span>Estadio de
+                    Vélez</span></li>
+            <li><strong>14/12/2024</strong> - <span>Atlético Tucumán vs Racing Club</span> - <span>Estadio
+                    Monumental</span></li>
+            <li><strong>16/12/2024</strong> - <span>Huracán vs River Plate</span> - <span>Estadio Tomás A.
+                    Ducó</span></li>
+            <li><strong>18/12/2024</strong> - <span>Independiente vs Talleres (Córdoba)</span> - <span>Estadio
+                    Libertadores de América</span></li>
+            <li><strong>20/12/2024</strong> - <span>Godoy Cruz vs Platense</span> - <span>Estadio Malvinas
+                    Argentinas</span></li>
+            <li><strong>22/12/2024</strong> - <span>Vélez Sarsfield vs Racing Club</span> - <span>Estadio de
+                    Vélez</span></li>
+            <li><strong>24/12/2024</strong> - <span>Atlético Tucumán vs River Plate</span> - <span>Estadio
+                    Monumental</span></li>
+            <li><strong>26/12/2024</strong> - <span>Huracán vs Boca Juniors</span> - <span>Estadio Tomás A.
+                    Ducó</span></li>
+            <li><strong>28/12/2024</strong> - <span>Independiente vs Platense</span> - <span>Estadio Libertadores de
+                    América</span></li>
+            <li><strong>30/12/2024</strong> - <span>Godoy Cruz vs Talleres (Córdoba)</span> - <span>Estadio Malvinas
+                    Argentinas</span></li>
+            <li><strong>02/01/2025</strong> - <span>Vélez Sarsfield vs Huracán</span> - <span>Estadio de
+                    Vélez</span></li>
+            <li><strong>04/01/2025</strong> - <span>Atlético Tucumán vs Platense</span> - <span>Estadio
+                    Monumental</span></li>
+            <li><strong>06/01/2025</strong> - <span>Racing Club vs River Plate</span> - <span>Estadio de
+                    Racing</span></li>
+            <li><strong>08/01/2025</strong> - <span>Independiente vs Godoy Cruz</span> - <span>Estadio Libertadores
+                    de América</span></li>
+            <li><strong>10/01/2025</strong> - <span>Huracán vs Talleres (Córdoba)</span> - <span>Estadio Tomás A.
+                    Ducó</span></li>
+            <li><strong>12/12/2024</strong> - <span>Vélez Sarsfield vs Boca Juniors</span> - <span>Estadio de
+                    Vélez</span></li>
+            <li><strong>14/12/2024</strong> - <span>Atlético Tucumán vs Racing Club</span> - <span>Estadio
+                    Monumental</span></li>
+
+
+        </ul>
+    </div>
+</div>
+<!-- Fin de la fila -->
+<!-- tabla -->
+</div>
+<!-- FIN carrusel y tabla -->
+
+<!-- COMIENZO seccion visitanos -->
+<div id="conocenos" class="row py-4">
+    <div class="col-md-4 offset-md-2">
+        <h2>Visitanos</h2>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798.1107369203612!2d-61.60873770803249!3d-34.01445899949085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c7e9710ecc6963%3A0x10df05d02cd5311c!2sIndependiente%20F%C3%BAtbol%20Club!5e0!3m2!1ses!2sar!4v1727445622378!5m2!1ses!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <!-- COMIENZO contactanos -->
+    <div class="col-md-4 mt-4 mt-sm-0">
+        <h2>Contactanos</h2>
+        <form class="row g-3" action="/" method="post">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido">
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="email@email.com">
+            </div>
+            <div class="col-12">
+                <label for="tel" class="form-label">Tel</label>
+                <input type="text" class="form-control" id="tel" name="tel" placeholder="...">
+            </div>
+            <div class="col-12">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+        {{message}}
+    </div>
+    <!-- FIN contactanos -->
+</div>
+<!-- FIN seccion visitanos -->

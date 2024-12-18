@@ -12,6 +12,210 @@ body{
     border-bottom: 1px solid black; 
 }
 
+#eventos {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    border-radius: 8px;
+}
+
+#eventos h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.card {
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #C8102E;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #C8102E;
+    border-color: #C8102E;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #9e0f1d;
+    border-color: #9e0f1d;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+}
+.tabla-container {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que el borde redondeado sea visible */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0; /* Elimina cualquier relleno extra */
+    box-sizing: border-box; /* Incluye bordes y padding dentro del tamaño total */
+}
+
+#tabla-liga {
+    width: 100%; /* Asegura que la tabla ocupe todo el contenedor */
+    border-collapse: collapse; /* Asegura que los bordes no se solapen */
+    margin: 0; /* Elimina márgenes extra */
+    box-sizing: border-box; /* Para manejar los bordes y padding correctamente */
+}
+
+#tabla-liga th,
+#tabla-liga td {
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 16px;
+}
+
+#tabla-liga thead {
+    background-color: #ffffff;
+    color: rgb(255, 250, 250);
+}
+
+#tabla-liga tbody tr {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+#tabla-liga tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+#tabla-liga tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+#tabla-liga td:first-child {
+    font-weight: bold;
+    color: #000;
+}
+
+#tabla-liga td:nth-child(2) {
+    font-weight: bold;
+}
+
+#tabla-liga td:last-child {
+    color: #2d2d2d;
+}
+
+#tabla-liga th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.equipo-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posicion {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.nombre-equipo {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#tabla-liga td img {
+    max-width: 40px;
+    margin-left: 5px;
+}
+
+.d-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.tabla-container {
+    flex: 0 0 70%;
+}
+
+
+.calendario-container {
+    flex: 0 0 25%; 
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendario-container h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #000000; 
+}
+
+.calendario-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.calendario-container li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.calendario-container li strong {
+    color: #000000; 
+}
+
+.calendario-container li span {
+    display: inline-block;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #007bff; 
+    border-color: #007bff;     
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; 
+    border-color: #0056b3;
+}
+
 
 
 
