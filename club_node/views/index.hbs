@@ -1,59 +1,60 @@
-<!-- Comienza Sección Eventos  -->
+<!-- Comienza Sección Eventos -->
 <link rel="stylesheet" href="club.css">
 <div id="eventos" class="container my-5">
     <h2 class="text-center">Próximos Eventos</h2>
-    <div class="row">
-        <div class="col-md-4">
+    <ul class="row list-unstyled">
+        {{#each eventos}}
+        <li class="col-md-4">
             <div class="card">
-                <img src="img/estadio.png" class="card-img-top" alt="Evento 1">
+                <img src="/img/evento.jpg" class="card-img-top" alt="Evento 1">
                 <div class="card-body">
-                    <h5 class="card-title">Evento 1</h5>
-                    <p class="card-text">Vamos a mejorar el estadio de futbol</p>
-
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Modal{{id}}" class="event-link">{{titulo}}</a>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="img/evento2.jpg" class="card-img-top" alt="Evento 2">
-                <div class="card-body">
-                    <h5 class="card-title">Evento 2</h5>
-                    <p class="card-text"></p>
+        </li>
+        {{/each}}
+    </ul>
+</div>
 
-                </div>
+<!-- Modal -->
+{{#each eventos}}
+<div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel{{id}}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel{{id}}">{{titulo}}</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="img/evento3.jpg" class="card-img-top" alt="Evento 3">
-                <div class="card-body">
-                    <h5 class="card-title">Evento 3</h5>
-                    <p class="card-text"></p>
-
-                </div>
+            <div class="modal-body">
+                <h5>{{subtitulo}}</h5>
+                <p>{{cuerpo}}</p> 
             </div>
         </div>
     </div>
 </div>
+{{/each}}
+<!-- Fin Modal -->
 <!-- Fin Sección Eventos -->
+
+
 <!-- Comienza la fila que contiene tanto la tabla como la sección de socios -->
 <div class="d-flex justify-content-between my-5">
     <div class="tabla-container">
         <!-- comienzo tabla -->
 
-        
+
         <table id="tabla-liga" class="table table-bordered">
 
             <thead>
                 <tr>
                     <th colspan="9">
-                        <h2>Tabla de la liga</h2>
+                        <h2>Tabla de posiciones - División "B" - Zona 02</h2>
                     </th>
                 </tr>
 
                 <tr>
                     <th>Equipo</th>
-                    <th>J</th>
+                    <th>PJ</th>
                     <th>G</th>
                     <th>E</th>
                     <th>P</th>
@@ -68,7 +69,7 @@
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">1</span>
-                            <img src="" alt="Logo Equipo A">
+                            <img src="/img/CENTENARIO.png" alt="Logo Equipo A">
                             <span class="nombre-equipo">Centenario FBC</span>
                         </div>
                     </td>
@@ -85,154 +86,154 @@
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">2</span>
-                            <img src="ruta-a-logo.jpg" alt="Logo Equipo B">
-                            <span class="nombre-equipo">Equipo B</span>
+                            <img src="/img/atlsanmartin.png" alt="Logo Equipo B">
+                            <span class="nombre-equipo">Atl. San Martín</span>
                         </div>
                     </td>
-                    <td>10</td>
-                    <td>5</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>15</td>
-                    <td>10</td>
-                    <td>5</td>
+                    <td>17</td>
+                    <td>9</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>25</td>
                     <td>18</td>
+                    <td>7</td>
+                    <td>31</td>
                 </tr>
                 <tr>
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">3</span>
-                            <img src="ruta-a-logo.jpg" alt="Logo Equipo C">
-                            <span class="nombre-equipo">Equipo C</span>
+                            <img src="/img/CENTRALARGENTINO.png" alt="Logo Equipo C">
+                            <span class="nombre-equipo">Central Argentino</span>
                         </div>
                     </td>
-                    <td>10</td>
-                    <td>4</td>
-                    <td>4</td>
+                    <td>17</td>
+                    <td>8</td>
+                    <td>7</td>
                     <td>2</td>
+                    <td>28</td>
                     <td>14</td>
-                    <td>12</td>
-                    <td>2</td>
-                    <td>16</td>
+                    <td>4</td>
+                    <td>31</td>
                 </tr>
                 <tr>
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">4</span>
-                            <img src="ruta-a-logo.jpg" alt="Logo Equipo D">
-                            <span class="nombre-equipo">Equipo D</span>
+                            <img src="/img/independientefbc.png" alt="Logo Equipo D">
+                            <span class="nombre-equipo">Independiente FBC</span>
                         </div>
                     </td>
-                    <td>10</td>
-                    <td>5</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>16</td>
-                    <td>14</td>
-                    <td>2</td>
                     <td>17</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>17</td>
+                    <td>12</td>
+                    <td>5</td>
+                    <td>27</td>
                 </tr>
                 <tr>
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">5</span>
-                            <img src="ruta-a-logo.jpg" alt="Logo Equipo E">
-                            <span class="nombre-equipo">Equipo E</span>
+                            <img src="/img/SPORTSMAN.png" alt="Logo Equipo E">
+                            <span class="nombre-equipo">Sportsman CSD</span>
                         </div>
                     </td>
-                    <td>10</td>
+                    <td>17</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>23</td>
+                    <td>19</td>
                     <td>4</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>13</td>
-                    <td>11</td>
-                    <td>2</td>
-                    <td>15</td>
+                    <td>26</td>
                 </tr>
                 <tr>
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">6</span>
-                            <img src="ruta-a-logo.jpg" alt="Logo Equipo F">
-                            <span class="nombre-equipo">Equipo F</span>
+                            <img src="/img/NUEVAERA.png" alt="Logo Equipo F">
+                            <span class="nombre-equipo">Nueva Era</span>
                         </div>
                     </td>
-                    <td>10</td>
-                    <td>4</td>
+                    <td>17</td>
+                    <td>6</td>
                     <td>2</td>
-                    <td>4</td>
-                    <td>12</td>
-                    <td>13</td>
-                    <td>-1</td>
-                    <td>14</td>
+                    <td>9</td>
+                    <td>22</td>
+                    <td>25</td>
+                    <td>-3</td>
+                    <td>20</td>
                 </tr>
                 <tr>
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">7</span>
-                            <img src="ruta-a-logo.jpg" alt="Logo Equipo G">
-                            <span class="nombre-equipo">Equipo G</span>
+                            <img src="/img/LAFC.png" alt="Logo Equipo G">
+                            <span class="nombre-equipo">Los Andes FBC</span>
                         </div>
                     </td>
-                    <td>10</td>
+                    <td>17</td>
+                    <td>5</td>
                     <td>3</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td>11</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>13</td>
+                    <td>9</td>
+                    <td>12</td>
+                    <td>28</td>
+                    <td>-16</td>
+                    <td>18</td>
                 </tr>
                 <tr>
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">8</span>
-                            <img src="ruta-a-logo.jpg" alt="Logo Equipo H">
-                            <span class="nombre-equipo">Equipo H</span>
+                            <img src="/img/CHAPUY.png" alt="Logo Equipo H">
+                            <span class="nombre-equipo">Deportivo Chapuy</span>
                         </div>
                     </td>
-                    <td>10</td>
-                    <td>3</td>
-                    <td>3</td>
+                    <td>17</td>
                     <td>4</td>
-                    <td>12</td>
-                    <td>14</td>
-                    <td>-2</td>
-                    <td>12</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>21</td>
+                    <td>29</td>
+                    <td>-8</td>
+                    <td>17</td>
                 </tr>
                 <tr>
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">9</span>
-                            <img src="ruta-a-logo.jpg" alt="Logo Equipo I">
-                            <span class="nombre-equipo">Equipo I</span>
+                            <img src="/img/SPORTIVOMARIATERESA.png" alt="Logo Equipo I">
+                            <span class="nombre-equipo">Sportivo MT</span>
                         </div>
                     </td>
-                    <td>10</td>
+                    <td>17</td>
                     <td>3</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>10</td>
-                    <td>13</td>
-                    <td>-3</td>
-                    <td>11</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>19</td>
+                    <td>24</td>
+                    <td>-5</td>
+                    <td>16</td>
                 </tr>
                 <tr>
                     <td>
                         <div class="equipo-info">
                             <span class="posicion">10</span>
-                            <img src="ruta-a-logo.jpg" alt="Logo Equipo J">
-                            <span class="nombre-equipo">Equipo J</span>
+                            <img src="/img/NM.png" alt="Logo Equipo J">
+                            <span class="nombre-equipo">Náutico Melincué</span>
                         </div>
                     </td>
-                    <td>10</td>
+                    <td>17</td>
                     <td>2</td>
-                    <td>4</td>
-                    <td>4</td>
-                    <td>9</td>
-                    <td>11</td>
-                    <td>-2</td>
+                    <td>5</td>
                     <td>10</td>
+                    <td>12</td>
+                    <td>23</td>
+                    <td>-11</td>
+                    <td>11</td>
                 </tr>
 
 
@@ -241,47 +242,34 @@
         </table>
     </div>
 
-    <!-- Sección de Beneficios de ser socio -->
+    
     <div id="calendario" class="calendario-container" style="flex: 0 0 25%; padding-left: 20px;">
         <h3 class="text-center">Calendario de Partidos</h3>
         <ul>
-            <!-- 15 partidos en la lista -->
-            <li><strong>12/12/2024</strong> - <span>Vélez Sarsfield vs Boca Juniors</span> - <span>Estadio de
-                    Vélez</span></li>
-            <li><strong>14/12/2024</strong> - <span>Atlético Tucumán vs Racing Club</span> - <span>Estadio
-                    Monumental</span></li>
-            <li><strong>16/12/2024</strong> - <span>Huracán vs River Plate</span> - <span>Estadio Tomás A.
-                    Ducó</span></li>
-            <li><strong>18/12/2024</strong> - <span>Independiente vs Talleres (Córdoba)</span> - <span>Estadio
-                    Libertadores de América</span></li>
-            <li><strong>20/12/2024</strong> - <span>Godoy Cruz vs Platense</span> - <span>Estadio Malvinas
-                    Argentinas</span></li>
-            <li><strong>22/12/2024</strong> - <span>Vélez Sarsfield vs Racing Club</span> - <span>Estadio de
-                    Vélez</span></li>
-            <li><strong>24/12/2024</strong> - <span>Atlético Tucumán vs River Plate</span> - <span>Estadio
-                    Monumental</span></li>
-            <li><strong>26/12/2024</strong> - <span>Huracán vs Boca Juniors</span> - <span>Estadio Tomás A.
-                    Ducó</span></li>
-            <li><strong>28/12/2024</strong> - <span>Independiente vs Platense</span> - <span>Estadio Libertadores de
-                    América</span></li>
-            <li><strong>30/12/2024</strong> - <span>Godoy Cruz vs Talleres (Córdoba)</span> - <span>Estadio Malvinas
-                    Argentinas</span></li>
-            <li><strong>02/01/2025</strong> - <span>Vélez Sarsfield vs Huracán</span> - <span>Estadio de
-                    Vélez</span></li>
-            <li><strong>04/01/2025</strong> - <span>Atlético Tucumán vs Platense</span> - <span>Estadio
-                    Monumental</span></li>
-            <li><strong>06/01/2025</strong> - <span>Racing Club vs River Plate</span> - <span>Estadio de
-                    Racing</span></li>
-            <li><strong>08/01/2025</strong> - <span>Independiente vs Godoy Cruz</span> - <span>Estadio Libertadores
-                    de América</span></li>
-            <li><strong>10/01/2025</strong> - <span>Huracán vs Talleres (Córdoba)</span> - <span>Estadio Tomás A.
-                    Ducó</span></li>
-            <li><strong>12/12/2024</strong> - <span>Vélez Sarsfield vs Boca Juniors</span> - <span>Estadio de
-                    Vélez</span></li>
-            <li><strong>14/12/2024</strong> - <span>Atlético Tucumán vs Racing Club</span> - <span>Estadio
-                    Monumental</span></li>
-
-
+            
+            <li><strong>Fecha 01</strong> - <span>Deportivo Chapuy vs Independiente FBC</span> - <span>Estadio de
+                    Deportivo chapuy</span></li>
+            <li><strong>Fecha 02</strong> - <span>Centenario FBC vs Independiente FBC</span> - <span>Estadio de
+                    Centenario FBC</span></li>
+            <li><strong>Fecha 03</strong> - <span>Independiente FBC vs Nautico Melincué</span> - <span>Estadio de
+                    Independiente FBC</span></li>
+            <li><strong>Fecha 4</strong> - <span>Nueva Era vs Independiente FBC</span> - <span>Estadio de
+                    Nueva Era</span></li>
+            <li><strong>Fecha 05</strong> - <span>Independiente FBC vs Los Andes FBC</span> - <span>Estadio de
+                    Independiente FBC</span></li>
+            <li><strong>Fecha 06</strong> - <span>Sportsman vs Independiente FBC</span> - <span>Estadio de
+                    Sportsman</span></li>
+            <li><strong>Fecha 07</strong> - <span>Independiente FBC vs Central Argentino</span> - <span>Estadio de
+                    Independiente FBC</span></li>
+            <li><strong>Fecha 08</strong> - <span>Atl. San Martín vs Independiente FBC</span> - <span>Estadio de
+                    Atl. San Martín</span></li>
+           <li><strong>Fecha 09</strong> - <span>Independiente FBC vs Sportivo MT</span> - <span>Estadio de
+                    Independiente FBC</span></li>
+           <li><strong>Fecha 01 (Vuelta)</strong> - <span>Independiente FBC vs Deportivo Chapuy</span> - <span>Estadio de
+                    Independiente FBC </span></li>
+            <li><strong>Fecha 02 (Vuelta)</strong> - <span>Independiente FBC vs Centenario FBC</span> - <span>Estadio de
+                    Independiente FBC</span></li>
+            
         </ul>
     </div>
 </div>
@@ -302,7 +290,7 @@
         </div>
     </div>
     <!-- COMIENZO contactanos -->
-    <div class="col-md-4 mt-4 mt-sm-0">
+    <div class="col-md-4 mt-4 mt-sm-0" id="contactanos">
         <h2>Contactanos</h2>
         <form class="row g-3" action="/" method="post">
             <div class="col-md-6">

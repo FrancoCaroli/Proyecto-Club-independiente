@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h1 class="text-center" style="color: white;">Agregar un Evento</h1>
+  <form action="/admin/eventos/agregar" method="post">
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese un título">
+    </div>
+    <div class="mb-3">
+      <label for="subtitulo" class="form-label">Subtítulo</label>
+      <input type="text" class="form-control" id="subtitulo" name="subtitulo" placeholder="Ingrese un subtítulo">
+    </div>
+    <div class="mb-3">
+      <label for="cuerpo" class="form-label">Cuerpo</label>
+      <textarea class="form-control" id="cuerpo" name="cuerpo" rows="4" placeholder="Ingrese un cuerpo"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+  {{#if error}}
+   <p>{{message}}</p>
+  {{/if}}
+</div>

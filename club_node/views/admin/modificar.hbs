@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <h1 class="text-center" style="color: white;">Modificar el Evento N° {{evento.id}} </h1>
+  <form action="/admin/eventos/modificar" method="post">
+    <input type="hidden" value="{{evento.id}}" name="id">
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" class="form-control"  name="titulo" value="{{evento.titulo}}">
+    </div>
+    <div class="mb-3">
+      <label for="subtitulo" class="form-label">Subtítulo</label>
+      <input type="text" class="form-control"  name="subtitulo" value="{{evento.subtitulo}}">
+    </div>
+    <div class="mb-3">
+      <label for="cuerpo" class="form-label">Cuerpo</label>
+      <textarea class="form-control"  name="cuerpo" rows="4" >{{evento.cuerpo}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Modificar</button>
+  </form>
+  {{#if error}}
+    <p>{{message}}</p>
+  {{/if}}
+</div>

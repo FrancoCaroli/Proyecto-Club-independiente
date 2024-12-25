@@ -82,28 +82,36 @@ body{
         height: 150px;
     }
 }
-.tabla-container {
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-    border-radius: 8px;
-    overflow: hidden; /* Asegura que el borde redondeado sea visible */
+.tabla-container,
+.calendario-container {
+    width: 100%;
+    font-size: 10px; 
+    overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Centra el contenedor */
-    padding: 0; /* Elimina cualquier relleno extra */
-    box-sizing: border-box; /* Incluye bordes y padding dentro del tamaño total */
+    margin: 0 auto; 
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    height: auto;
+}
+
+.tabla-container {
+    flex: 1; 
 }
 
 #tabla-liga {
-    width: 100%; /* Asegura que la tabla ocupe todo el contenedor */
-    border-collapse: collapse; /* Asegura que los bordes no se solapen */
-    margin: 0; /* Elimina márgenes extra */
-    box-sizing: border-box; /* Para manejar los bordes y padding correctamente */
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #tabla-liga th,
 #tabla-liga td {
     text-align: center;
-    padding: 12px 15px;
-    font-size: 16px;
+    padding: 18px 20px;
+    font-size: 14px;
 }
 
 #tabla-liga thead {
@@ -143,9 +151,25 @@ body{
 }
 
 .equipo-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: start; 
+    gap: 10px; 
+}
+
+.equipo-info .posicion {
+    font-weight: bold;
+}
+
+.equipo-info img {
+    width: 30px; 
+    height: auto;
+    
+}
+
+.equipo-info .nombre-equipo {
+    font-weight: bold;
+    color: #333;
 }
 
 .posicion {
@@ -163,39 +187,47 @@ body{
     margin-left: 5px;
 }
 
-.d-flex {
-    display: flex;
-    gap: 20px;
-}
-
-.tabla-container {
-    flex: 0 0 70%;
-}
-
-
 .calendario-container {
-    flex: 0 0 25%; 
-    background-color: #f8f9fa; 
+    flex: 1; 
+    background-color: #f8f9fa;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%; 
 }
 
 .calendario-container h3 {
     margin-bottom: 20px;
-    font-size: 1.5em;
-    color: #000000; 
+    font-size: 3em; 
+    color: #000000;
+    text-align: center; 
+    width: 100%;
 }
 
 .calendario-container ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .calendario-container li {
     margin-bottom: 15px;
-    font-size: 1.1em;
+    font-size: 1.3em; 
+    display: block;
+    width: 100%;
+    padding: 6px 0; 
 }
+
+.calendario-container li strong {
+    color: #000000;
+}
+
+.calendario-container li span {
+    display: inline-block;
+    color: #333;
+    font-size: 1.1em; 
+}
+
 
 .calendario-container li strong {
     color: #000000; 
@@ -216,6 +248,10 @@ body{
     border-color: #0056b3;
 }
 
+.event-link {
+    color: inherit; 
+    text-decoration: none; 
+}
 
 
 
