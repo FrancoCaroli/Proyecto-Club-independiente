@@ -13,44 +13,65 @@
 
     {{!-- inicio fila2 --}}
     <div class="row">
-        <div class="col-7" style="margin-top:-15px ;">
+        <div class="col-7" style="margin-top:-9px ; padding-left: 23px;">
             <h2 style="color: white;">Listado de Eventos</h2>
         </div>
-        <div class="col-5 text-right">
-            <a href="/admin/eventos/agregar" class="btn btn-success" style="float:right;  margin-top:-10px;"><i class="fas 
+        <div class="col-2 text-right">
+            <a href="/admin/eventos/agregar" class="btn btn-success"><i class="fas 
                fa-plus"></i> Nuevo</a>
         </div>
+        <div class="col-3 text-right" style="padding-right: 24px;">
+            <form class="form-inline d-flex" action="/admin/eventos" method="get">
+                <input class="form-control " type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}}
+                    value="{{q}}" {{/if}}>
+                <button class="btn btn-secondary btn-sm" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
     </div>
+
+
     {{!-- fin fila2 --}}
 
     {{!-- inicio fila3 --}}
     <div class="container">
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Título</th>
-                    <th scope="col" class="text-end">Opciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each eventos}}
-                <tr>
-                    <th scope="row">{{id}}</th>
-                    <td>{{titulo}}</td>
-                    <td class="text-end">
-                        <a href="/admin/eventos/modificar/{{id}}" class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
-                        <a href="/admin/eventos/eliminar/{{id}}" class="btn btn-danger">
-                            <i class="fas fa-trash-alt"></i>
-                        </a>
-                    </td>
-                </tr>
-                {{/each}}
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col" class="text-end">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each eventos}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{titulo}}</td>
+                        <td>{{{imagen}}}</td>
+                        <td class="text-end">
+                            <a href="/admin/eventos/modificar/{{id}}" class="btn btn-secondary"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                            <a href="/admin/eventos/eliminar/{{id}}" class="btn btn-danger">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            {{#if is_search}}
+               {{#unless eventos.length}}
+                   No se encontraron resultados para "<b>{{q}}</b>"
+               {{/unless}}
+            {{/if}}
+
+        </div>
     </div>
-</div>
 
 
 </div>

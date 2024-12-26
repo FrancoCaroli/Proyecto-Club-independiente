@@ -1,16 +1,19 @@
 <div class="container mt-5">
   <h1 class="text-center" style="color: white;">Agregar un Evento</h1>
-  <form action="/admin/eventos/agregar" method="post">
+  <form action="/admin/eventos/agregar" method="post" enctype="multipart/form-data">
     <div class="mb-3">
-      <label for="titulo" class="form-label">Título</label>
+      <label for="titulo" class="form-label" style="color: white;">Título</label>
       <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese un título">
     </div>
     <div class="mb-3">
-      <label for="subtitulo" class="form-label">Subtítulo</label>
+      <label for="subtitulo" class="form-label" style="color: white;">Subtítulo</label>
       <input type="text" class="form-control" id="subtitulo" name="subtitulo" placeholder="Ingrese un subtítulo">
     </div>
+    <div class="form-group">
+      <label style="color: white;">Imagen: <input class="form-control" type="file" name="imagen" id="imagen"></label>
+    </div>
     <div class="mb-3">
-      <label for="cuerpo" class="form-label">Cuerpo</label>
+      <label for="cuerpo" class="form-label" style="color: white;">Cuerpo</label>
       <textarea class="form-control" id="cuerpo" name="cuerpo" rows="4" placeholder="Ingrese un cuerpo"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Guardar</button>

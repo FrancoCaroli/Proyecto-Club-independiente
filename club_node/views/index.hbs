@@ -6,7 +6,7 @@
         {{#each eventos}}
         <li class="col-md-4">
             <div class="card">
-                <img src="/img/evento.jpg" class="card-img-top" alt="Evento 1">
+                <img src="{{imagen}}" class="card-img-top" alt="Evento 1">
                 <div class="card-body">
                     <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Modal{{id}}" class="event-link">{{titulo}}</a>
                 </div>
@@ -27,6 +27,7 @@
             </div>
             <div class="modal-body">
                 <h5>{{subtitulo}}</h5>
+                <img src="{{imagen}}"/>
                 <p>{{cuerpo}}</p> 
             </div>
         </div>

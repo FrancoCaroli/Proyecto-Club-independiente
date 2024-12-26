@@ -40,4 +40,13 @@ async function modificarEventosById(obj, id) {
         throw error;
     }
 }
-module.exports ={getEventos, deleteEventosById, insertEvento, getEventosById, modificarEventosById}
+
+async function buscarEventos(busqueda) {
+    var query = "select * from eventos where titulo like ? OR subtitulo like ? OR cuerpo like ?";
+    var rows = await pool.query(query, ['%' + busqueda + '%', '%' + busqueda + '%', '%' + busqueda + '%']);
+    return rows;
+}
+
+
+
+module.exports ={getEventos, deleteEventosById, insertEvento, getEventosById, modificarEventosById, buscarEventos}

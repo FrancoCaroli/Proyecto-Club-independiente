@@ -2,15 +2,45 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
 var eventosModel = require('../models/eventosModel');
+var cloudinary = require('cloudinary').v2;
+
 /* GET home page. */
-router.get('/',async function(req, res, next) {
+router.get('/', async function (req, res, next) {
+  try {
+    // Obtener eventos desde el modelo
+    var eventos = await eventosModel.getEventos();
 
-  var eventos = await eventosModel.getEventos();
-  res.render('index',{
-    eventos
-  });
+    // Seleccionar los primeros 5 eventos
+    eventos = eventos.splice(0, 5);
+
+    // Procesar las imágenes de los eventos
+    eventos = eventos.map(evento => {
+      if (evento.img_id) {
+        const imagen = cloudinary.url(evento.img_id, {
+          width: 460,
+          crop: 'fill'
+        });
+        return {
+          ...evento,
+          imagen
+        };
+      } else {
+        return {
+          ...evento,
+          imagen: '/img/Eventopers.png'
+        };
+      }
+    });
+
+    // Renderizar la vista 'index' con los eventos
+    res.render('index', {
+      eventos
+    });
+  } catch (error) {
+    console.error(error);
+    next(error); // Manejo de errores
+  }
 });
-
 
 router.post('/',async(req, res, next)=>{
   var nombre=req.body.nombre;
@@ -22,7 +52,7 @@ router.post('/',async(req, res, next)=>{
   var obj= {
     to:'carolifranco7@gmail.com',
     subjet:'CONTACTO WEB',
-    html: nombre + "se conecto a traves de la web y quiere mas informacion a este correo : " + email + ". <br> Su tel es: " + tel
+    html: nombre + " " + apellido + " se conecto a traves y quiere mas info a este correo: " + email +  ". <br> Además, hizo el siguiente comentario: " + mensaje + ".<br> Su tel es: " + tel
    }
 
   var transport= nodemailer.createTransport({
